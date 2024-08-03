@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Mali', sans-serif;
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #ffc0cb 25%, transparent 25%), 
+                      linear-gradient(135deg, #ffc0cb 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #ffc0cb 75%), 
+                      linear-gradient(135deg, transparent 75%, #ffc0cb 75%);
+    background-size: 20px 20px;
+    animation: backgroundMove 10s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0, 10px 0, 10px -10px, 0px 10px;
+    }
+    100% {
+        background-position: 20px 20px, 30px 20px, 30px 10px, 20px 30px;
+    }
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    max-width: 600px; /* Smaller header image */
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+social-icons img:hover {
+    transform: scale(1.2);
+}
+
+main {
+    padding: 20px;
+}
+
+.intro, section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 192, 203, 0.85); /* Increased opacity */
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+    font-family: 'Super Creamy', cursive;
+    font-size: 2.5em;
+    color: white;
+}
+
+.intro p, section p {
+    font-size: 1.2em;
+    color: white;
+}
+
+section h2 {
+    font-family: 'Super Creamy', cursive;
+    font-size: 2em;
+    color: white;
+}
+
+h3 {
+    font-family: 'Mali', cursive;
+    font-size: 1em;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.intro, section {
+    animation: fadeIn 2s ease-in-out;
+}
+
+aside {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.kofi-button {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5px;
+    background: rgba(255, 192, 203, 0.85);
+    border-top: 2px solid white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Super Creamy', cursive;
+    font-size: 0.8em;
+    color: white;
+}
